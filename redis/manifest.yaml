@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
  name: redis 
  namespace: roboshop
-labels:
- project: roboshop
- environment: dev
- tier: database
+ labels:
+  project: roboshop
+  environment: dev
+  tier: database
 spec:
  replicas: 1
  selector:
