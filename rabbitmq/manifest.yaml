@@ -3,6 +3,10 @@ kind: Secret
 metadata: 
  name: rabbitmq
  namespace: roboshop
+ labels: 
+    project: roboshop
+    environment: dev
+    tier: database
 type: Opaque
 data:
    RABBITMQ_DEFAULT_USER: "cm9ib3Nob3A="
@@ -20,7 +24,7 @@ metadata:
   tier: database
 spec:
  replicas: 1
- selectors:
+ selector:
   matchLabels:
     project: roboshop
     environment: dev
@@ -28,13 +32,17 @@ spec:
  template: 
   metadata: 
    name: rabbitmq
+   labels: 
+    project: roboshop
+    environment: dev
+    tier: database
   spec:
    containers:
     - name: rabbitmq
       image: rabbitmq:3 
       envFrom:
        - secretRef:
-         name: rabbitmq 
+          name: rabbitmq 
 
 ---
 
