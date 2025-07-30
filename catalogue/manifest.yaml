@@ -11,7 +11,9 @@ metadata:
 data:
  MONGO: "true" 
  MONGO_URL: "mongodb://mongodb:27017/catalogue"
+
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
@@ -41,7 +43,9 @@ spec:
       envfrom:
         - configMapRef:
            name: catalogue
+
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
