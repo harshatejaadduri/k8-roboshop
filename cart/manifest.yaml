@@ -51,6 +51,10 @@ kind: Service
 metadata: 
   name: cart
   namespace: roboshop
+  labels:
+    project: roboshop
+    tier: backend
+    environment: dev
 spec:
  selector:
     project: roboshop

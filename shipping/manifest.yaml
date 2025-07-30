@@ -49,6 +49,10 @@ kind: Service
 metadata: 
  name: shipping
  namespace: roboshop
+ labels: 
+  project: roboshop
+  environment: dev
+  tier: backend
 spec:
  selector:
   project: roboshop
