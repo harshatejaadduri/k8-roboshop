@@ -4,7 +4,7 @@ metadata:
  name: shipping
  namespace: roboshop
  labels:
-  project: roboshop
+  component: shipping
   environment: dev
   tier: backend
 data:
@@ -18,20 +18,20 @@ metadata:
  name: shipping
  namespace: roboshop
  labels:
-  project: roboshop
+  component: shipping
   environment: dev
   tier: backend
 spec:
  replicas: 1
  selector:
   matchLabels:
-    project: roboshop
+    component: shipping
     environment: dev
     tier: backend
  template:
   metadata:
    labels: 
-    project: roboshop
+    component: shipping
     environment: dev
     tier: backend
   spec:
@@ -49,12 +49,12 @@ metadata:
  name: shipping
  namespace: roboshop
  labels: 
-  project: roboshop
+  component: shipping
   environment: dev
   tier: backend
 spec:
  selector:
-  project: roboshop
+  component: shipping
   environment: dev
   tier: backend
  ports:

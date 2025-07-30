@@ -5,7 +5,7 @@ metadata:
  namespace: roboshop
  labels:
   environment: dev
-  project: roboshop
+  component: user
   tier: backend  
 data:
   REDIS_URL: 'redis://redis:6379' 
@@ -20,20 +20,20 @@ metadata:
  namespace: roboshop
  labels:
   environment: dev
-  project: roboshop
+  component: user
   tier: backend
 spec:  
  replicas: 1
  selector:
   matchLabels:
     environment: dev
-    project: roboshop
+    component: user
     tier: backend
  template:
   metadata:
    labels:
     environment: dev
-    project: roboshop
+    component: user
     tier: backend   
   spec: 
    containers:
@@ -51,12 +51,12 @@ metadata:
  namespace: roboshop
  labels:
     environment: dev
-    project: roboshop
+    component: user
     tier: backend  
 spec:
  selector:
     environment: dev
-    project: roboshop
+    component: user
     tier: backend
  ports:
    - protocol: TCP

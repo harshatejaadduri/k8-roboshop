@@ -4,20 +4,20 @@ metadata:
  name: redis 
  namespace: roboshop
  labels:
-  project: roboshop
+  component: redis
   environment: dev
   tier: database
 spec:
  replicas: 1
  selector:
   matchLabels:
-    project: roboshop
+    component: redis
     environment: dev
     tier: database
  template:
   metadata:
    labels:
-    project: roboshop
+    component: redis
     environment: dev
     tier: database    
   spec: 
@@ -32,12 +32,12 @@ metadata:
  name: redis
  namespace: roboshop
  labels:
-    project: roboshop
+    component: redis
     environment: dev
     tier: database  
 spec:
  selector:
-  project: roboshop
+  component: redis
   environment: dev
   tier: database
  ports: 

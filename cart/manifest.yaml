@@ -4,7 +4,7 @@ metadata:
   name: cart
   namespace: roboshop
   labels:
-    project: roboshop
+    component: cart
     tier: backend
     environment: dev   
 data:
@@ -19,20 +19,20 @@ metadata:
  name: cart
  namespace: roboshop
  labels:
-  project: roboshop
+  component: cart
   tier: backend
   environment: dev
 spec:
  replicas: 1
  selector:
   matchLabels: 
-    project: roboshop
+    component: cart
     tier: backend
     environment: dev
  template:
   metadata:
    labels:
-    project: roboshop
+    component: cart
     tier: backend
     environment: dev   
   spec: 
@@ -50,12 +50,12 @@ metadata:
   name: cart
   namespace: roboshop
   labels:
-    project: roboshop
+    component: cart
     tier: backend
     environment: dev
 spec:
  selector:
-    project: roboshop
+    component: cart
     tier: backend
     environment: dev
  ports:

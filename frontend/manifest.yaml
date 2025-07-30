@@ -4,7 +4,7 @@ metadata:
  name: frontend
  namespace: roboshop
  labels:
-  project: roboshop
+  component: frontend
   environment: dev
   tier: web
 data: 
@@ -80,20 +80,20 @@ metadata:
  name: frontend
  namespace: roboshop
  labels: 
-  project: roboshop
+  component: frontend
   environment: dev
   tier: web
 spec:
   replicas: 1
   selector:
     matchLabels:
-      project: roboshop
+      component: frontend
       environment: dev
       tier: web
   template:
    metadata:
     labels:
-        project: roboshop
+        component: frontend
         environment: dev
         tier: web   
    spec:
@@ -120,13 +120,13 @@ metadata:
   name: nginx
   namespace: roboshop
   labels:
-    project: roboshop
+    component: frontend
     environment: dev
     tier: web   
 spec:
   type: LoadBalancer
   selector:
-        project: roboshop
+        component: frontend
         environment: dev
         tier: web   
   ports:

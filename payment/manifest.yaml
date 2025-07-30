@@ -4,7 +4,7 @@ metadata:
  name: payment
  namespace: roboshop
  labels:
-  project: roboshop
+  component: payment
   environment: dev
   tier: backend
 data:
@@ -22,7 +22,7 @@ metadata:
  name: payment
  namespace: roboshop
  labels:
-  project: roboshop
+  component: payment
   environment: dev
   tier: backend
 type: Opaque
@@ -36,20 +36,20 @@ metadata:
  name: payment
  namespace: roboshop
  labels:
-  project: roboshop
+  component: payment
   environment: dev
   tier: backend
 spec:
  replicas: 1
  selector:
   matchLabels:
-    project: roboshop
+    component: payment
     environment: dev
     tier: backend
  template:
   metadata:
    labels:
-    project: roboshop
+    component: payment
     environment: dev
     tier: backend
   spec:
@@ -69,12 +69,12 @@ metadata:
  name: payment
  namespace: roboshop
  labels:
-  project: roboshop
+  component: payment
   environment: dev
   tier: backend         
 spec:
  selector:
-  project: roboshop
+  component: payment
   environment: dev
   tier: backend  
  ports:

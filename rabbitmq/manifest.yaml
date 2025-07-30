@@ -4,7 +4,7 @@ metadata:
  name: rabbitmq
  namespace: roboshop
  labels: 
-    project: roboshop
+    component: rabbitmq
     environment: dev
     tier: database
 type: Opaque
@@ -19,20 +19,20 @@ metadata:
  name: rabbitmq
  namespace: roboshop
  labels: 
-  project: roboshop
+  component: rabbitmq
   environment: dev
   tier: database
 spec:
  replicas: 1
  selector:
   matchLabels:
-    project: roboshop
+    component: rabbitmq
     environment: dev
     tier: database
  template: 
   metadata: 
    labels: 
-    project: roboshop
+    component: rabbitmq
     environment: dev
     tier: database
   spec:
@@ -51,12 +51,12 @@ metadata:
  name: rabbitmq
  namespace: roboshop
  labels: 
-    project: roboshop
+    component: rabbitmq
     environment: dev
     tier: database
 spec:
  selector:
-  project: roboshop
+  component: rabbitmq
   environment: dev
   tier: database
  ports:
