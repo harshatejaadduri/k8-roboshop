@@ -32,7 +32,6 @@ spec:
  template:
   metadata:
    name: cart
-   namespace: roboshop
    labels:
     project: roboshop
     tier: backend
