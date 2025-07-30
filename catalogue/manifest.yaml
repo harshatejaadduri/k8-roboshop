@@ -40,9 +40,9 @@ spec:
       containers:
        - name: catalogue
          image: harshatejaadduri/catalogue:v2
-      envFrom:
-        - configMapRef:
-           name: catalogue
+         envFrom:
+         - configMapRef:
+            name: catalogue
 
 ---
 
