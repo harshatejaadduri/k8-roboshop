@@ -1,8 +1,13 @@
 apiVerison: v1 
-kind: configMap
+kind: ConfigMap
 metadata: 
   name: catalogue
-  Namespace: roboshop
+  namespace: roboshop
+  labels:
+     project: roboshop
+     app: catalogue
+     tier: backend  
+
 data:
  MONGO: "true" 
  MONGO_URL: "mongodb://mongodb:27017/catalogue"
