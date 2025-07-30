@@ -85,7 +85,6 @@ metadata:
   tier: web
 spec:
   replicas: 1
-  type: LoadBalancer
   selector:
     matchLabels:
       project: roboshop
