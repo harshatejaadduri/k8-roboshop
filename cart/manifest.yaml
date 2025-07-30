@@ -33,6 +33,10 @@ spec:
   metadata:
    name: cart
    namespace: roboshop
+   labels:
+    project: roboshop
+    tier: backend
+    environment: dev   
   spec: 
    containers:
     - name: cart
