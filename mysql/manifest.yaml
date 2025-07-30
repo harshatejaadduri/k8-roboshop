@@ -32,7 +32,6 @@ spec:
     tier: database
  template:
   metadata:
-   name: mysql
    labels:
      project: roboshop
      environment: dev

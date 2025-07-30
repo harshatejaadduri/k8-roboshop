@@ -30,7 +30,6 @@ spec:
     tier: backend
  template:
   metadata:
-   name: shipping
    labels: 
     project: roboshop
     environment: dev

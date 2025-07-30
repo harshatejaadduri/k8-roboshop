@@ -16,7 +16,6 @@ spec:
     tier: database
  template:
   metadata:
-   name: redis
    labels:
     project: roboshop
     environment: dev

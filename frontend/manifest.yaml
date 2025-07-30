@@ -92,7 +92,6 @@ spec:
       tier: web
   template:
    metadata:
-    name: frontend
     labels:
         project: roboshop
         environment: dev

@@ -31,7 +31,6 @@ spec:
     tier: backend
  template:
   metadata:
-   name: user
    labels:
     environment: dev
     project: roboshop

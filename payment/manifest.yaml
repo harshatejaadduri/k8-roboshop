@@ -48,7 +48,6 @@ spec:
     tier: backend
  template:
   metadata:
-   name: payment
    labels:
     project: roboshop
     environment: dev

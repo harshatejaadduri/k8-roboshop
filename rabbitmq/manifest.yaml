@@ -31,7 +31,6 @@ spec:
     tier: database
  template: 
   metadata: 
-   name: rabbitmq
    labels: 
     project: roboshop
     environment: dev

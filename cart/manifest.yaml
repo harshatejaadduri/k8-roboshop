@@ -31,7 +31,6 @@ spec:
     environment: dev
  template:
   metadata:
-   name: cart
    labels:
     project: roboshop
     tier: backend
