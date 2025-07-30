@@ -24,7 +24,7 @@ metadata:
   tier: backend
 spec:
  replicas: 1
- selectors:
+ selector:
   matchLabels:
     project: roboshop
     environment: dev
@@ -32,13 +32,17 @@ spec:
  template:
   metadata:
    name: shipping
+   labels: 
+    project: roboshop
+    environment: dev
+    tier: backend
   spec:
    containers:
     - name: shipping
       image: harshatejaadduri/shipping:v2
       envFrom:
        - configMapRef:
-         name: shipping
+          name: shipping
 
 ---
 apiVersion: v1 
