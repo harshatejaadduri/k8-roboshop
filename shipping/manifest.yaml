@@ -7,7 +7,6 @@ metadata:
   project: roboshop
   environment: dev
   tier: backend
-type: Opaque
 data:
  CART_ENDPOINT: "cart:8080" 
  DB_HOST: "mysql"
