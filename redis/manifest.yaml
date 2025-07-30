@@ -9,7 +9,7 @@ labels:
  tier: database
 spec:
  replicas: 1
- selectors:
+ selector:
   matchLabels:
     project: roboshop
     environment: dev
