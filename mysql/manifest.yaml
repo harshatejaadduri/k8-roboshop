@@ -3,11 +3,17 @@ kind: Secret
 metadata:
  name: mysql 
  namespace: roboshop
+ labels:
+  project: roboshop
+  environment: dev
+  tier: backend
+
 type: Opaque
 data:
  MYSQL_ROOT_PASS: "Um9ib1Nob3BAMQ=="
 
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -27,6 +33,10 @@ spec:
  template:
   metadata:
    name: mysql
+   labels:
+     project: roboshop
+     environment: dev
+     tier: backend
   spec: 
    containers:
     - name: mysql
