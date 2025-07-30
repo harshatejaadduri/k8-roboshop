@@ -51,7 +51,7 @@ kind: Service
 metadata:
  name: mysql
  namespace: roboshop
-labels:
+ labels:
   project: roboshop
   environment: dev
   tier: database
