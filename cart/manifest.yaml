@@ -3,6 +3,10 @@ kind: configMap
 metadata: 
   name: cart
   namespace: roboshop
+  labels:
+    project: roboshop
+    tier: backend
+    environment: dev   
 data:
  REDIS_HOST: "redis" 
  CATALOGUE_HOST: "catalogue" 
@@ -47,7 +51,7 @@ spec:
  selector:
     project: roboshop
     tier: backend
-    environment: backend
+    environment: dev
  ports:
    - protocol: TCP
      port: 8080
