@@ -1,8 +1,12 @@
 apiVersion: v1 
-kind: configMap
+kind: ConfigMap
 metadata:
  name: user
  namespace: roboshop
+ labels:
+  environment: dev
+  project: roboshop
+  tier: backend  
 data:
   REDIS_URL: 'redis://redis:6379' 
   MONGO_URL: "mongodb://mongodb:27017/users"
@@ -19,7 +23,7 @@ metadata:
   tier: backend
 spec:  
  replicas: 1
- selectors:
+ selector:
   matchLabels:
     environment: dev
     project: roboshop
@@ -27,6 +31,10 @@ spec:
  template:
   metadata:
    name: user
+   labels:
+    environment: dev
+    project: roboshop
+    tier: backend   
   spec: 
    containers:
     - name: user
